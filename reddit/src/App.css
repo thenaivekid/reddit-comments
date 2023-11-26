@@ -43,8 +43,8 @@
 
 .comment{
   margin-top: 4px;
-  padding: 2px;
-  border: 1px solid #ccc;
+  padding: 20px;
+  border-left: 1px solid #ccc;
   background-color: #00000031;
   text-align: left;
 }
