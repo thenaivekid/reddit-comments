@@ -30,11 +30,10 @@ addComment(content,user,parentId)
       <div>
         <h3>{comment.username}</h3>
         <h5>mother id {comment.motherId}</h5>
+        <h5> id {comment.id}</h5>
+
         <p>{comment.comment_content}</p>  
-        {replies?.map((el)=>{
-const rr=replies.filter((e)=>e.motherId ===el.id)
-            return <Comment comment={el} addComment={add}   r={rr??[]} />
-        })}
+        
       </div>
 
       <button onClick={handleReplyClick}>Reply</button>
@@ -44,6 +43,9 @@ const rr=replies.filter((e)=>e.motherId ===el.id)
       )}
       <div id={replySectionId} className="reply">
             <h5>replies here</h5>
+            {replies?.map((el)=>{
+            return <Comment comment={el} addComment={add}   r={r??[]} />
+        })}
         </div>
     </div>
   );
